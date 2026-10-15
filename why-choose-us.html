@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Choose YOR Realty | Real Estate With More Personal Approach</title>
+  <meta name="description" content="Discover why discerning buyers, sellers, and global NRIs choose YOR Realty. Real estate with a more personal approach, verified property ownership, 30-year forensic legal scrutiny, and full digitalized ecosystem across Kerala." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c59b27'/><path d='M30 70 L50 25 L70 70 Z' fill='%23ffffff'/></svg>">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Fluid Effects -->
+  <canvas id="fluidCanvas" class="fluid-canvas"></canvas>
+  <div class="fluid-ambient-orb fluid-orb-1"></div>
+  <div class="fluid-ambient-orb fluid-orb-2"></div>
+  <div class="fluid-ambient-orb fluid-orb-3"></div>
+  <div class="liquid-cursor-glow" id="liquidCursorGlow"></div>
+
+  <!-- Sticky Luxury Navbar (Matching Dark Midnight Theme) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-flex">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav">
+        <ul class="nav-menu-desktop">
+          <li class="nav-item"><a href="index.html" class="nav-link-item">Home</a></li>
+          
+          <li class="nav-item">
+            <a href="why-choose-us.html" class="nav-link-item active">
+              About <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#aboutSection" class="dropdown-link"><i class="fa-solid fa-building-columns"></i> Who We Are</a></li>
+              <li><a href="why-choose-us.html" class="dropdown-link active"><i class="fa-solid fa-handshake-angle"></i> Why Choose YOR</a></li>
+              <li><a href="team.html" class="dropdown-link"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+              <li><a href="index.html#statementBanner" class="dropdown-link"><i class="fa-solid fa-shield-halved"></i> 30-Yr Legal Scrutiny</a></li>
+              <li><a href="index.html#reviewsSection" class="dropdown-link"><i class="fa-solid fa-star"></i> Verified Testimonials</a></li>
+              <li><a href="index.html#partnersSection" class="dropdown-link"><i class="fa-solid fa-city"></i> Trusted Builders</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="properties.html" class="nav-link-item">
+              Properties <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="properties.html?filter=villas" class="dropdown-link"><i class="fa-solid fa-house"></i> Luxury Villas</a></li>
+              <li><a href="properties.html?filter=apartments" class="dropdown-link"><i class="fa-solid fa-building"></i> Modern Apartments</a></li>
+              <li><a href="properties.html?filter=plots" class="dropdown-link"><i class="fa-solid fa-layer-group"></i> Clear-Title Plots</a></li>
+              <li><a href="properties.html?filter=commercial" class="dropdown-link"><i class="fa-solid fa-store"></i> Commercial Yield</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#verticalsSection" class="nav-link-item">
+              Verticals <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="sales.html" class="dropdown-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+              <li><a href="rentals.html" class="dropdown-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+              <li><a href="investment.html" class="dropdown-link"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="index.html#valuationSection" class="nav-link-item">Calculators</a></li>
+          <li class="nav-item"><a href="outlets.html" class="nav-link-item">Our Outlets</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <div class="header-action-stack">
+          <div class="header-social">
+            <a href="https://wa.me/919196562199" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <a href="tel:+919196562199" class="header-phone-sub" title="Call YOR Realty Desk">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 91965 62199</span>
+          </a>
+        </div>
+        <button class="btn-mobile-nav" id="btnMobileToggle" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO / BREADCRUMB BANNER
+       ========================================================================== -->
+  <section class="page-hero-banner" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 60px 0 50px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); color: #ffffff;">
+    <div class="container">
+      <div class="page-breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: #94a3b8; margin-bottom: 16px;">
+        <a href="index.html" style="color: #94a3b8; text-decoration: none; transition: color 0.2s;"><i class="fa-solid fa-house"></i> Home</a>
+        <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #64748b;"></i>
+        <a href="index.html#aboutSection" style="color: #94a3b8; text-decoration: none;">About</a>
+        <i class="fa-solid fa-chevron-right" style="font-size: 0.7rem; color: #64748b;"></i>
+        <span style="color: #ffd700; font-weight: 600;">Why Choose YOR Realty</span>
+      </div>
+
+      <div style="max-width: 860px;">
+        <span class="section-eyebrow" style="background: rgba(197, 155, 39, 0.18); color: #ffd700; border-color: rgba(197, 155, 39, 0.35); margin-bottom: 12px; display: inline-flex;">
+          <i class="fa-solid fa-crown"></i> Institutional Distinction
+        </span>
+        <h1 style="font-family: var(--font-heading); font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 16px;">
+          Real Estate With <span style="background: linear-gradient(135deg, #ffd700 0%, #fab005 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">More Personal Approach</span>.
+        </h1>
+        <p style="font-size: 1.1rem; color: #cbd5e1; line-height: 1.7; margin-bottom: 24px;">
+          We believe every property decision is personal. That's why we focus on understanding your needs, providing clear guidance and delivering solutions that create lasting value.
+        </p>
+
+        <!-- Trust Badges Row -->
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+          <span style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; color: #f1f5f9; border: 1px solid rgba(255, 255, 255, 0.12);">
+            <i class="fa-solid fa-shield-halved" style="color: #ffd700;"></i> 30-Year Prior Title Scrutiny
+          </span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; color: #f1f5f9; border: 1px solid rgba(255, 255, 255, 0.12);">
+            <i class="fa-solid fa-circle-nodes" style="color: #ffd700;"></i> Full Digitalized Ecosystem
+          </span>
+          <span style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; color: #f1f5f9; border: 1px solid rgba(255, 255, 255, 0.12);">
+            <i class="fa-solid fa-globe" style="color: #ffd700;"></i> India, GCC & Worldwide NRI Support
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6-FEATURE ARCHITECTURAL SHOWCASE
+       ========================================================================== -->
+  <section class="section-padding why-choose-section" id="whyChooseFeatures" style="padding: 85px 0;">
+    <div class="container">
+      <div class="section-head" style="text-align: center; max-width: 840px; margin: 0 auto 12px;">
+        <span class="section-eyebrow"><i class="fa-solid fa-award"></i> The YOR Realty Difference</span>
+        <h2 class="section-headline">6 Core Pillars Built Around <span>Your Best Interests</span></h2>
+        <p class="section-lead" style="margin: 0 auto;">
+          Whether acquiring a luxury ancestral estate, discovering lucrative commercial yields, or entrusting property supervision from abroad, these six pillars govern every engagement.
+        </p>
+      </div>
+
+      <div class="why-feature-grid">
+        
+        <!-- Feature 01: Trusted Guidance -->
+        <div class="why-feature-card">
+          <div class="why-feature-top">
+            <div class="why-feature-icon">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <span class="why-feature-tag"><i class="fa-solid fa-shield-halved"></i> Advisory</span>
+          </div>
+          <h3 class="why-feature-title">Trusted Guidance</h3>
+          <p class="why-feature-desc">
+            Get professional support to help you navigate important property decisions with greater clarity and confidence.
+          </p>
+          <div class="why-feature-perk">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Clarity & Confidence Guarantee</span>
+          </div>
+        </div>
+
+        <!-- Feature 02: Personalised Service -->
+        <div class="why-feature-card">
+          <div class="why-feature-top">
+            <div class="why-feature-icon">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <span class="why-feature-tag"><i class="fa-solid fa-hand-holding-heart"></i> Bespoke</span>
+          </div>
+          <h3 class="why-feature-title">Personalised Service</h3>
+          <p class="why-feature-desc">
+            We take the time to understand what matters to you and tailor our approach to your unique requirements.
+          </p>
+          <div class="why-feature-perk">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Tailored 1-on-1 Approach</span>
+          </div>
+        </div>
+
+        <!-- Feature 03: Right Opportunities -->
+        <div class="why-feature-card">
+          <div class="why-feature-top">
+            <div class="why-feature-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <span class="why-feature-tag"><i class="fa-solid fa-gem"></i> Curated</span>
+          </div>
+          <h3 class="why-feature-title">Right Opportunities</h3>
+          <p class="why-feature-desc">
+            Discover property opportunities that align with your needs, preferences, lifestyle and long-term goals.
+          </p>
+          <div class="why-feature-perk">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Lifestyle & Goal Alignment</span>
+          </div>
+        </div>
+
+        <!-- Feature 04: End-to-End Support -->
+        <div class="why-feature-card">
+          <div class="why-feature-top">
+            <div class="why-feature-icon">
+              <i class="fa-solid fa-route"></i>
+            </div>
+            <span class="why-feature-tag"><i class="fa-solid fa-handshake"></i> Turnkey</span>
+          </div>
+          <h3 class="why-feature-title">End-to-End Support</h3>
+          <p class="why-feature-desc">
+            From your first enquiry to the completion of your property journey, we're here to guide you through every important step.
+          </p>
+          <div class="why-feature-perk">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Turnkey Guidance At Every Step</span>
+          </div>
+        </div>
+
+        <!-- Feature 05: Property Management -->
+        <div class="why-feature-card">
+          <div class="why-feature-top">
+            <div class="why-feature-icon">
+              <i class="fa-solid fa-building-circle-check"></i>
+            </div>
+            <span class="why-feature-tag"><i class="fa-solid fa-house-chimney-user"></i> Asset Care</span>
+          </div>
+          <h3 class="why-feature-title">Property Management</h3>
+          <p class="why-feature-desc">
+            We help property owners manage their assets with reliable support and ongoing oversight.
+          </p>
+          <div class="why-feature-perk">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Reliable Oversight & Custody</span>
+          </div>
+        </div>
+
+        <!-- Feature 06: Long-Term Relationships -->
+        <div class="why-feature-card">
+          <div class="why-feature-top">
+            <div class="why-feature-icon">
+              <i class="fa-solid fa-handshake-simple"></i>
+            </div>
+            <span class="why-feature-tag"><i class="fa-solid fa-certificate"></i> Partnership</span>
+          </div>
+          <h3 class="why-feature-title">Long-Term Relationships</h3>
+          <p class="why-feature-desc">
+            We believe lasting relationships are at the heart of good real estate. Our goal is to be a trusted partner for your property journey today and tomorrow.
+          </p>
+          <div class="why-feature-perk">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Lifelong Property Partnership</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Institutional Commitment Banner -->
+      <div class="why-feature-banner">
+        <div class="why-feature-banner-left">
+          <div class="why-banner-icon">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div class="why-banner-text">
+            <h4>Every Property Decision, Handled With Discretion & Precision</h4>
+            <p>From initial discovery to final title registration and ongoing asset supervision across Kerala.</p>
+          </div>
+        </div>
+        <div class="why-banner-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-calendar-check"></i> Schedule A Personal Consultation
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INSTITUTIONAL BENCHMARK: YOR REALTY VS TRADITIONAL BROKERAGE
+       ========================================================================== -->
+  <section class="section-padding" style="background: #ffffff; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 80px 0;">
+    <div class="container">
+      <div class="section-head" style="text-align: center; max-width: 820px; margin: 0 auto 36px;">
+        <span class="section-eyebrow"><i class="fa-solid fa-scale-balanced"></i> Institutional Benchmark</span>
+        <h2 class="section-headline">The <span>YOR Realty Standard</span> vs Traditional Brokerage</h2>
+        <p class="section-lead" style="margin: 0 auto;">
+          Experience the structural security of dealing with an audited institution rather than informal local intermediaries.
+        </p>
+      </div>
+
+      <div style="overflow-x: auto; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);">
+        <table style="width: 100%; border-collapse: collapse; min-width: 650px; text-align: left; font-size: 0.92rem;">
+          <thead>
+            <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0;">
+              <th style="padding: 18px 24px; font-weight: 700; color: #1e293b; width: 30%;">Core Metric</th>
+              <th style="padding: 18px 24px; font-weight: 700; color: #c59b27; width: 35%; background: rgba(197, 155, 39, 0.05); border-left: 2px solid rgba(197, 155, 39, 0.3); border-right: 2px solid rgba(197, 155, 39, 0.3);">
+                <i class="fa-solid fa-crown" style="margin-right: 6px;"></i> YOR Realty Standard
+              </th>
+              <th style="padding: 18px 24px; font-weight: 700; color: #64748b; width: 35%;">Traditional Brokerage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 18px 24px; font-weight: 600; color: #0f172a;">Legal Title Audit</td>
+              <td style="padding: 18px 24px; color: #0f172a; font-weight: 600; background: rgba(197, 155, 39, 0.03); border-left: 2px solid rgba(197, 155, 39, 0.3); border-right: 2px solid rgba(197, 155, 39, 0.3);">
+                <i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> 30-Year Forensic High Court Advocate Audit &amp; Clean Encumbrance Certificate
+              </td>
+              <td style="padding: 18px 24px; color: #64748b;">
+                <i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 8px;"></i> Superficial or verbal seller assertions with high litigation risk
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 18px 24px; font-weight: 600; color: #0f172a;">Pricing Transparency</td>
+              <td style="padding: 18px 24px; color: #0f172a; font-weight: 600; background: rgba(197, 155, 39, 0.03); border-left: 2px solid rgba(197, 155, 39, 0.3); border-right: 2px solid rgba(197, 155, 39, 0.3);">
+                <i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Transparent registration-linked pricing, zero hidden markups
+              </td>
+              <td style="padding: 18px 24px; color: #64748b;">
+                <i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 8px;"></i> Arbitrary price hikes and multiple undocumented intermediary margins
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 18px 24px; font-weight: 600; color: #0f172a;">Digital Ecosystem</td>
+              <td style="padding: 18px 24px; color: #0f172a; font-weight: 600; background: rgba(197, 155, 39, 0.03); border-left: 2px solid rgba(197, 155, 39, 0.3); border-right: 2px solid rgba(197, 155, 39, 0.3);">
+                <i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Web &amp; Mobile App deed vault, deal tracking &amp; remote video audits
+              </td>
+              <td style="padding: 18px 24px; color: #64748b;">
+                <i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 8px;"></i> Fragmented WhatsApp messages and physical paper shuffling
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #e2e8f0;">
+              <td style="padding: 18px 24px; font-weight: 600; color: #0f172a;">Global NRI Oversight</td>
+              <td style="padding: 18px 24px; color: #0f172a; font-weight: 600; background: rgba(197, 155, 39, 0.03); border-left: 2px solid rgba(197, 155, 39, 0.3); border-right: 2px solid rgba(197, 155, 39, 0.3);">
+                <i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Power of Attorney facilitation, quarterly remote inspections, tenancy care
+              </td>
+              <td style="padding: 18px 24px; color: #64748b;">
+                <i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 8px;"></i> Absentee ownership vulnerability with zero post-sale assistance
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 18px 24px; font-weight: 600; color: #0f172a;">Institutional Breadth</td>
+              <td style="padding: 18px 24px; color: #0f172a; font-weight: 600; background: rgba(197, 155, 39, 0.03); border-left: 2px solid rgba(197, 155, 39, 0.3); border-right: 2px solid rgba(197, 155, 39, 0.3);">
+                <i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Full Supermarket: Sale, Rentals, High-Yield Investment &amp; Custody
+              </td>
+              <td style="padding: 18px 24px; color: #64748b;">
+                <i class="fa-solid fa-circle-xmark" style="color: #ef4444; margin-right: 8px;"></i> One-off isolated deals with zero ongoing asset stewardship
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       YOR MOBILE & WEB APP ECOSYSTEM (SEAMLESS DIGITAL ECOSYSTEM)
+       ========================================================================== -->
+  <section class="section-padding app-download-section" id="appDownloadSection">
+    <div class="container">
+      <div class="app-download-card">
+        <div class="app-download-grid">
+          
+          <!-- Content Left -->
+          <div class="app-download-content">
+            <span class="section-eyebrow" style="background: rgba(197, 155, 39, 0.18); color: #ffd700; border-color: rgba(197, 155, 39, 0.35);">
+              <i class="fa-solid fa-mobile-screen-button"></i> Seamless Digital Ecosystem
+            </span>
+            <h2 class="app-download-headline">
+              Manage Kerala Real Estate <span>On The Go</span>
+            </h2>
+            <p class="app-download-desc">
+              Experience the power of YOR Realty from anywhere in the world. Whether you are living in Dubai, London, or Kerala, our dedicated mobile and web applications put verified listings, legal deed vaults, and live NRI video audits in the palm of your hand.
+            </p>
+
+            <div class="app-feature-badges">
+              <div class="app-feat-item">
+                <i class="fa-solid fa-folder-open"></i>
+                <div>
+                  <strong>Digital Deed Vault</strong>
+                  <small>Access 30-year ECs &amp; title reports anytime</small>
+                </div>
+              </div>
+              <div class="app-feat-item">
+                <i class="fa-solid fa-video"></i>
+                <div>
+                  <strong>Live Video Audits</strong>
+                  <small>Quarterly NRI remote property streaming</small>
+                </div>
+              </div>
+              <div class="app-feat-item">
+                <i class="fa-solid fa-bell"></i>
+                <div>
+                  <strong>Instant Deal Alerts</strong>
+                  <small>First access to pre-market Kerala listings</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-download-cta-row">
+              <!-- iOS App Store -->
+              <a href="https://apple.com/app-store" target="_blank" class="app-store-btn" title="Download on iOS App Store">
+                <i class="fa-brands fa-apple"></i>
+                <div class="app-store-btn-text">
+                  <span class="app-store-label">Download on the</span>
+                  <span class="app-store-title">Apple App Store</span>
+                </div>
+              </a>
+
+              <!-- Google Play Store -->
+              <a href="https://play.google.com/store" target="_blank" class="app-store-btn" title="Download on Google Play Store">
+                <i class="fa-brands fa-google-play"></i>
+                <div class="app-store-btn-text">
+                  <span class="app-store-label">GET IT ON</span>
+                  <span class="app-store-title">Google Play</span>
+                </div>
+              </a>
+
+              <!-- Web App Portal -->
+              <a href="properties.html" class="app-store-btn app-store-btn-web" title="Launch Web Application">
+                <i class="fa-solid fa-globe"></i>
+                <div class="app-store-btn-text">
+                  <span class="app-store-label">INSTANT ACCESS</span>
+                  <span class="app-store-title">Launch Web App</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- App Mockup Visual Right -->
+          <div class="app-download-visual">
+            <div class="app-phone-mockup">
+              <div class="phone-screen">
+                <div class="phone-header">
+                  <div class="phone-time">9:41</div>
+                  <div class="phone-icons"><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></div>
+                </div>
+                <div class="phone-app-content">
+                  <div class="phone-app-top">
+                    <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR App" class="phone-app-logo" />
+                    <span class="phone-verified-tag"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                  </div>
+                  <div class="phone-card-preview">
+                    <div class="phone-card-tag">Signature Villa</div>
+                    <h4>The Palm Crest, Kochi</h4>
+                    <p class="phone-price">₹3.85 Cr · Clear Title</p>
+                    <div class="phone-doc-chip"><i class="fa-solid fa-file-shield"></i> 30-Yr EC Audited</div>
+                  </div>
+                  <div class="phone-nri-card">
+                    <div class="phone-nri-icon"><i class="fa-solid fa-video"></i></div>
+                    <div>
+                      <strong>Live Video Inspection</strong>
+                      <small>Next scheduled: Oct 28</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL LUXURY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand & Purpose -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+        </a>
+        <p class="footer-desc">
+          YOR Realty is Kerala's premier real estate institution. Delivering 100% legal title scrutiny, transparent asset brokerage, pre-approved bank loans, and dedicated NRI wealth custodianship across Kerala.
+        </p>
+        <div class="footer-rera">
+          <i class="fa-solid fa-award"></i>
+          <span>K-RERA Audited Portfolio · Zero Litigation Record</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Institutional Portals -->
+      <div class="footer-links">
+        <h4 class="footer-title">Institutions &amp; Portals</h4>
+        <ul>
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home Overview</a></li>
+          <li><a href="why-choose-us.html"><i class="fa-solid fa-chevron-right"></i> Why Choose YOR Realty</a></li>
+          <li><a href="index.html#aboutSection"><i class="fa-solid fa-chevron-right"></i> Who We Are</a></li>
+          <li><a href="properties.html"><i class="fa-solid fa-chevron-right"></i> Verified Properties</a></li>
+          <li><a href="index.html#partnersSection"><i class="fa-solid fa-chevron-right"></i> Trusted Builders</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Book Advisory Session</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Core Verticals -->
+      <div class="footer-links">
+        <h4 class="footer-title">Core Verticals</h4>
+        <ul>
+          <li><a href="sales.html"><i class="fa-solid fa-chevron-right"></i> 1. Property Sale</a></li>
+          <li><a href="rentals.html"><i class="fa-solid fa-chevron-right"></i> 2. Property Rentals</a></li>
+          <li><a href="investment.html"><i class="fa-solid fa-chevron-right"></i> 3. Real Estate Investment</a></li>
+          <li><a href="properties.html?filter=villas"><i class="fa-solid fa-chevron-right"></i> Luxury Villas</a></li>
+          <li><a href="properties.html?filter=plots"><i class="fa-solid fa-chevron-right"></i> Clear-Title Plots</a></li>
+          <li><a href="properties.html?filter=commercial"><i class="fa-solid fa-chevron-right"></i> Commercial Yield</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Corporate Headquarters & Apps -->
+      <div class="footer-contact">
+        <h4 class="footer-title">Corporate Headquarters</h4>
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Cape House, Oyoor, Kollam, Kerala - 691510</span>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+919196562199" style="color: inherit; text-decoration: none;">+91 91965 62199</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:hello@yorrealty.com" style="color: inherit; text-decoration: none;">hello@yorrealty.com</a>
+        </div>
+        
+        <!-- YOR Mobile & Web App Badges -->
+        <div class="footer-app-badges" style="margin-top: 20px;">
+          <span style="display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 8px; font-weight: 700;">
+            Download YOR Realty Apps
+          </span>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="#" class="btn-footer-app" onclick="alert('YOR iOS App is coming soon.'); return false;" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); padding: 6px 12px; border-radius: 8px; color: #ffffff; font-size: 0.76rem; text-decoration: none;">
+              <i class="fa-brands fa-apple" style="font-size: 1rem;"></i> iOS App
+            </a>
+            <a href="#" class="btn-footer-app" onclick="alert('YOR Android App is coming soon.'); return false;" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); padding: 6px 12px; border-radius: 8px; color: #ffffff; font-size: 0.76rem; text-decoration: none;">
+              <i class="fa-brands fa-google-play" style="font-size: 0.9rem;"></i> Android
+            </a>
+            <a href="properties.html" style="display: inline-flex; align-items: center; gap: 6px; background: rgba(197, 155, 39, 0.15); border: 1px solid rgba(197, 155, 39, 0.35); padding: 6px 12px; border-radius: 8px; color: #ffd700; font-size: 0.76rem; text-decoration: none;">
+              <i class="fa-solid fa-globe" style="font-size: 0.9rem;"></i> Web App
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 YOR Realty &amp; Property Management. All Rights Reserved. Kerala's Premier Real Estate Institution.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-powered">Powered by <a href="#" target="_blank" rel="noopener noreferrer" class="powered-ainex">AINEX</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" style="height: 42px;" />
+      </a>
+      <button class="modal-close-btn" id="btnMobileNavClose" style="position: static;" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="team.html" class="mobile-nav-link"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+      <li><a href="properties.html" class="mobile-nav-link"><i class="fa-solid fa-gem"></i> Curated Properties</a></li>
+      <li><a href="sales.html" class="mobile-nav-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+      <li><a href="rentals.html" class="mobile-nav-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+      <li><a href="investment.html" class="mobile-nav-link"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+      <li><a href="index.html#valuationSection" class="mobile-nav-link"><i class="fa-solid fa-calculator"></i> Calculators</a></li>
+      <li><a href="outlets.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Our Outlets</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-phone"></i> Contact Desk</a></li>
+    </ul>
+  </aside>
+
+  <!-- Floating Action Dock -->
+  <div class="floating-actions-dock">
+    <button class="floating-top-btn" id="btnScrollTop" title="Scroll to Top" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

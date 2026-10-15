@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Outlets & Regional Hubs | YOR Realty Kerala</title>
+  <meta name="description" content="Visit YOR Realty's institutional outlets and regional advisory offices across Kerala: Kollam Corporate HQ, Kochi Infopark Commercial Desk, Trivandrum Capital Bureau, Calicut, Thrissur, and Kottayam." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c59b27'/><path d='M30 70 L50 25 L70 70 Z' fill='%23ffffff'/></svg>">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Fluid Effects -->
+  <canvas id="fluidCanvas" class="fluid-canvas"></canvas>
+  <div class="fluid-ambient-orb fluid-orb-1"></div>
+  <div class="fluid-ambient-orb fluid-orb-2"></div>
+  <div class="fluid-ambient-orb fluid-orb-3"></div>
+  <div class="liquid-cursor-glow" id="liquidCursorGlow"></div>
+
+  <!-- ==========================================================================
+       STICKY LUXURY NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-flex">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav">
+        <ul class="nav-menu-desktop">
+          <li class="nav-item"><a href="index.html" class="nav-link-item">Home</a></li>
+          
+          <li class="nav-item">
+            <a href="index.html#aboutSection" class="nav-link-item">
+              About <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#aboutSection" class="dropdown-link"><i class="fa-solid fa-building-columns"></i> Who We Are</a></li>
+              <li><a href="why-choose-us.html" class="dropdown-link"><i class="fa-solid fa-handshake-angle"></i> Why Choose YOR</a></li>
+              <li><a href="team.html" class="dropdown-link"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+              <li><a href="index.html#statementBanner" class="dropdown-link"><i class="fa-solid fa-shield-halved"></i> 30-Yr Legal Scrutiny</a></li>
+              <li><a href="index.html#reviewsSection" class="dropdown-link"><i class="fa-solid fa-star"></i> Verified Testimonials</a></li>
+              <li><a href="index.html#partnersSection" class="dropdown-link"><i class="fa-solid fa-city"></i> Trusted Builders</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="properties.html" class="nav-link-item">
+              Properties <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="properties.html?filter=villas" class="dropdown-link"><i class="fa-solid fa-house"></i> Luxury Villas</a></li>
+              <li><a href="properties.html?filter=apartments" class="dropdown-link"><i class="fa-solid fa-building"></i> Modern Apartments</a></li>
+              <li><a href="properties.html?filter=plots" class="dropdown-link"><i class="fa-solid fa-layer-group"></i> Clear-Title Plots</a></li>
+              <li><a href="properties.html?filter=commercial" class="dropdown-link"><i class="fa-solid fa-store"></i> Commercial Yield</a></li>
+              <li><a href="properties.html?filter=luxury" class="dropdown-link"><i class="fa-solid fa-gem"></i> Waterfront Mansions</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#verticalsSection" class="nav-link-item">
+              Verticals <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="sales.html" class="dropdown-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+              <li><a href="rentals.html" class="dropdown-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+              <li><a href="investment.html" class="dropdown-link"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#valuationSection" class="nav-link-item">
+              Calculators <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#valuationSection" class="dropdown-link"><i class="fa-solid fa-calculator"></i> Home Loan EMI Calculator</a></li>
+              <li><a href="index.html#valuationSection" class="dropdown-link"><i class="fa-solid fa-compass-drafting"></i> Property Valuation Estimator</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="outlets.html" class="nav-link-item active">Our Outlets</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Social, Phone Sub & Mobile Toggle -->
+      <div class="header-actions">
+        <div class="header-action-stack">
+          <div class="header-social">
+            <a href="https://wa.me/919196562199" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <a href="tel:+919196562199" class="header-phone-sub" title="Call YOR Realty Desk">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 91965 62199</span>
+          </a>
+        </div>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="btn-mobile-nav" id="btnMobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO BANNER
+       ========================================================================== -->
+  <section class="properties-page-hero">
+    <div class="container">
+      <div class="properties-hero-content">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <span>/</span>
+          <span style="color: var(--brand-gold);">Our Outlets</span>
+        </nav>
+        <span class="section-eyebrow"><i class="fa-solid fa-location-dot"></i> Pan-Kerala Presence</span>
+        <h1 class="properties-page-headline">Our Outlets &amp; Regional <span>Advisory Hubs</span></h1>
+        <p class="properties-page-lead">
+          Connect with dedicated property custodians, senior revenue title lawyers, and chartered valuers at any of our institutional outlets across Kerala.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       OUTLETS DIRECTORY SECTION
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+      
+      <!-- Filter Pills -->
+      <div class="outlet-filters-wrap">
+        <button class="outlet-filter-btn active" data-region="all">All Outlets (6)</button>
+        <button class="outlet-filter-btn" data-region="south">South Kerala (2)</button>
+        <button class="outlet-filter-btn" data-region="central">Central Kerala (3)</button>
+        <button class="outlet-filter-btn" data-region="north">North Kerala (1)</button>
+      </div>
+
+      <!-- Outlets Grid -->
+      <div class="outlets-grid" id="outletsGrid">
+
+        <!-- 1. Corporate HQ - Kollam -->
+        <div class="outlet-card" data-region="south">
+          <div class="outlet-card-header">
+            <span class="outlet-type-badge"><i class="fa-solid fa-building-columns"></i> Apex Directorate</span>
+            <span class="outlet-status-pill">Open Mon - Sat</span>
+          </div>
+          <h3 class="outlet-title">Corporate Headquarters</h3>
+          <div class="outlet-city"><i class="fa-solid fa-location-pin"></i> Kollam — Cape House, Oyoor</div>
+          
+          <div class="outlet-details-list">
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Cape House, Oyoor, Kollam District, Kerala — 691510</span>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:kollam@yorrealty.com">kollam@yorrealty.com</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>09:00 AM – 06:30 PM IST (Mon – Sat)</span>
+            </div>
+          </div>
+
+          <div class="outlet-tags">
+            <span class="outlet-tag">30-Yr Deed Vault</span>
+            <span class="outlet-tag">Legal Scrutiny Bench</span>
+            <span class="outlet-tag">NRI Escrow Desk</span>
+          </div>
+
+          <div class="outlet-actions">
+            <a href="tel:+919196562199" class="btn-outlet-call"><i class="fa-solid fa-phone"></i> Call Hub</a>
+            <a href="https://wa.me/919196562199?text=Hello%20YOR%20Realty,%20I%20would%20like%20to%20visit%20Kollam%20Headquarters" target="_blank" class="btn-outlet-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 2. Kochi Commercial Hub -->
+        <div class="outlet-card" data-region="central">
+          <div class="outlet-card-header">
+            <span class="outlet-type-badge"><i class="fa-solid fa-city"></i> Commercial &amp; NRI Desk</span>
+            <span class="outlet-status-pill">Open Mon - Sat</span>
+          </div>
+          <h3 class="outlet-title">Kochi Commercial Hub</h3>
+          <div class="outlet-city"><i class="fa-solid fa-location-pin"></i> Kochi — Kakkanad Infopark</div>
+          
+          <div class="outlet-details-list">
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Level 4, Prestige Cyber Towers, Infopark Expressway, Kakkanad, Kochi, Kerala — 682042</span>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:kochi@yorrealty.com">kochi@yorrealty.com</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>09:00 AM – 07:00 PM IST (Mon – Sat)</span>
+            </div>
+          </div>
+
+          <div class="outlet-tags">
+            <span class="outlet-tag">High-Yield Assets</span>
+            <span class="outlet-tag">Waterfront Mansions</span>
+            <span class="outlet-tag">Global NRI Advisory</span>
+          </div>
+
+          <div class="outlet-actions">
+            <a href="tel:+919196562199" class="btn-outlet-call"><i class="fa-solid fa-phone"></i> Call Hub</a>
+            <a href="https://wa.me/919196562199?text=Hello%20YOR%20Realty,%20I%20would%20like%20to%20visit%20Kochi%20Commercial%20Hub" target="_blank" class="btn-outlet-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 3. Trivandrum Capital Bureau -->
+        <div class="outlet-card" data-region="south">
+          <div class="outlet-card-header">
+            <span class="outlet-type-badge"><i class="fa-solid fa-scale-balanced"></i> Government Liaison</span>
+            <span class="outlet-status-pill">Open Mon - Sat</span>
+          </div>
+          <h3 class="outlet-title">Thiruvananthapuram Bureau</h3>
+          <div class="outlet-city"><i class="fa-solid fa-location-pin"></i> Trivandrum — Statue, MG Road</div>
+          
+          <div class="outlet-details-list">
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Skyline Citadel Chambers, Opp. Secretariat, MG Road, Statue, Thiruvananthapuram — 695001</span>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:tvm@yorrealty.com">tvm@yorrealty.com</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>09:00 AM – 06:00 PM IST (Mon – Sat)</span>
+            </div>
+          </div>
+
+          <div class="outlet-tags">
+            <span class="outlet-tag">K-RERA Registry</span>
+            <span class="outlet-tag">Revenue Title Lineage</span>
+            <span class="outlet-tag">Institutional Land Plots</span>
+          </div>
+
+          <div class="outlet-actions">
+            <a href="tel:+919196562199" class="btn-outlet-call"><i class="fa-solid fa-phone"></i> Call Hub</a>
+            <a href="https://wa.me/919196562199?text=Hello%20YOR%20Realty,%20I%20would%20like%20to%20visit%20Trivandrum%20Bureau" target="_blank" class="btn-outlet-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 4. Kozhikode Malabar Hub -->
+        <div class="outlet-card" data-region="north">
+          <div class="outlet-card-header">
+            <span class="outlet-type-badge"><i class="fa-solid fa-house-chimney-window"></i> Malabar Regional Hub</span>
+            <span class="outlet-status-pill">Open Mon - Sat</span>
+          </div>
+          <h3 class="outlet-title">Kozhikode Regional Hub</h3>
+          <div class="outlet-city"><i class="fa-solid fa-location-pin"></i> Calicut — Mavoor Road</div>
+          
+          <div class="outlet-details-list">
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>2nd Floor, Emerald Trade Centre, Mavoor Road, Kozhikode, Kerala — 673004</span>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:calicut@yorrealty.com">calicut@yorrealty.com</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>09:30 AM – 06:30 PM IST (Mon – Sat)</span>
+            </div>
+          </div>
+
+          <div class="outlet-tags">
+            <span class="outlet-tag">Residential Resale</span>
+            <span class="outlet-tag">Commercial Retail</span>
+            <span class="outlet-tag">GCC NRI Services</span>
+          </div>
+
+          <div class="outlet-actions">
+            <a href="tel:+919196562199" class="btn-outlet-call"><i class="fa-solid fa-phone"></i> Call Hub</a>
+            <a href="https://wa.me/919196562199?text=Hello%20YOR%20Realty,%20I%20would%20like%20to%20visit%20Kozhikode%20Hub" target="_blank" class="btn-outlet-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 5. Thrissur Heritage Hub -->
+        <div class="outlet-card" data-region="central">
+          <div class="outlet-card-header">
+            <span class="outlet-type-badge"><i class="fa-solid fa-landmark"></i> Cultural &amp; Heritage</span>
+            <span class="outlet-status-pill">Open Mon - Sat</span>
+          </div>
+          <h3 class="outlet-title">Thrissur Estates Office</h3>
+          <div class="outlet-city"><i class="fa-solid fa-location-pin"></i> Thrissur — Swaraj Round</div>
+          
+          <div class="outlet-details-list">
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Marar Road, Near Swaraj Round, Thrissur, Kerala — 680001</span>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:thrissur@yorrealty.com">thrissur@yorrealty.com</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>09:00 AM – 06:00 PM IST (Mon – Sat)</span>
+            </div>
+          </div>
+
+          <div class="outlet-tags">
+            <span class="outlet-tag">Heritage Tharavads</span>
+            <span class="outlet-tag">Prime Town Plots</span>
+            <span class="outlet-tag">Gated Communities</span>
+          </div>
+
+          <div class="outlet-actions">
+            <a href="tel:+919196562199" class="btn-outlet-call"><i class="fa-solid fa-phone"></i> Call Hub</a>
+            <a href="https://wa.me/919196562199?text=Hello%20YOR%20Realty,%20I%20would%20like%20to%20visit%20Thrissur%20Office" target="_blank" class="btn-outlet-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- 6. Kottayam Plantation Desk -->
+        <div class="outlet-card" data-region="central">
+          <div class="outlet-card-header">
+            <span class="outlet-type-badge"><i class="fa-solid fa-tree"></i> Plantations &amp; Land</span>
+            <span class="outlet-status-pill">Open Mon - Sat</span>
+          </div>
+          <h3 class="outlet-title">Kottayam Land Desk</h3>
+          <div class="outlet-city"><i class="fa-solid fa-location-pin"></i> Kottayam — KK Road</div>
+          
+          <div class="outlet-details-list">
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Pulimoodu Junction, KK Road, Kottayam, Kerala — 686001</span>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:kottayam@yorrealty.com">kottayam@yorrealty.com</a>
+            </div>
+            <div class="outlet-detail-item">
+              <i class="fa-regular fa-clock"></i>
+              <span>09:00 AM – 06:00 PM IST (Mon – Sat)</span>
+            </div>
+          </div>
+
+          <div class="outlet-tags">
+            <span class="outlet-tag">Rubber Estates</span>
+            <span class="outlet-tag">Hill-Range Mansions</span>
+            <span class="outlet-tag">Agriculture Titles</span>
+          </div>
+
+          <div class="outlet-actions">
+            <a href="tel:+919196562199" class="btn-outlet-call"><i class="fa-solid fa-phone"></i> Call Hub</a>
+            <a href="https://wa.me/919196562199?text=Hello%20YOR%20Realty,%20I%20would%20like%20to%20visit%20Kottayam%20Desk" target="_blank" class="btn-outlet-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Schedule an In-Person Meeting Banner -->
+      <div class="why-feature-banner" style="margin-top: 20px;">
+        <div class="why-feature-banner-left">
+          <div class="why-banner-icon">
+            <i class="fa-solid fa-handshake-simple"></i>
+          </div>
+          <div class="why-banner-text">
+            <h4>Prefer A Confidential Private Briefing?</h4>
+            <p>Our senior partners are available for in-person appointments at any of our outlets or via private video link for overseas NRIs.</p>
+          </div>
+        </div>
+        <div class="why-banner-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm">
+            <span>Schedule A Visit</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL LUXURY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo-wrap">
+            <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+          </a>
+          <p>
+            YOR Realty is Kerala's premier real estate institution. Delivering 100% legal title scrutiny, transparent asset brokerage, pre-approved bank loans, and dedicated NRI wealth custodianship across Kerala.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Property Categories</h4>
+          <ul class="footer-links">
+            <li><a href="properties.html?filter=villas">Luxury Villas</a></li>
+            <li><a href="properties.html?filter=apartments">Modern Apartments</a></li>
+            <li><a href="properties.html?filter=plots">Clear-Title Land Plots</a></li>
+            <li><a href="properties.html?filter=commercial">Commercial Assets</a></li>
+            <li><a href="properties.html?filter=luxury">Waterfront Mansions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Verticals</h4>
+          <ul class="footer-links">
+            <li><a href="sales.html">1. Property Sale &amp; Resale</a></li>
+            <li><a href="rentals.html">2. Property Rentals &amp; Leasing</a></li>
+            <li><a href="investment.html">3. Real Estate Investment</a></li>
+            <li><a href="outlets.html">Our Regional Outlets</a></li>
+            <li><a href="team.html">Our Core Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate Headquarters</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Cape House, Oyoor, Kollam District, Kerala — 691510</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:hello@yorrealty.com">hello@yorrealty.com</a>
+            </div>
+          </div>
+          <div class="footer-app-block">
+            <span class="footer-app-title">Download YOR App</span>
+            <div class="footer-app-buttons">
+              <a href="#" class="btn-footer-app" onclick="alert('YOR iOS App is coming soon.'); return false;">
+                <i class="fa-brands fa-apple"></i>
+                <span>iOS</span>
+              </a>
+              <a href="#" class="btn-footer-app" onclick="alert('YOR Android App is coming soon.'); return false;">
+                <i class="fa-brands fa-google-play"></i>
+                <span>Android</span>
+              </a>
+              <a href="properties.html" class="btn-footer-app">
+                <i class="fa-solid fa-globe"></i>
+                <span>Web App</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 YOR Realty &amp; Property Management. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-powered">Powered by <a href="#" target="_blank" rel="noopener noreferrer" class="powered-ainex">AINEX</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" style="height: 42px;" />
+      </a>
+      <button class="modal-close-btn" id="btnMobileNavClose" style="position: static;" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="index.html#aboutSection" class="mobile-nav-link"><i class="fa-solid fa-building-columns"></i> About YOR</a></li>
+      <li><a href="team.html" class="mobile-nav-link"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+      <li><a href="properties.html" class="mobile-nav-link"><i class="fa-solid fa-gem"></i> Curated Properties</a></li>
+      <li><a href="sales.html" class="mobile-nav-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+      <li><a href="rentals.html" class="mobile-nav-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+      <li><a href="investment.html" class="mobile-nav-link"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+      <li><a href="index.html#valuationSection" class="mobile-nav-link"><i class="fa-solid fa-calculator"></i> Calculators</a></li>
+      <li><a href="outlets.html" class="mobile-nav-link active"><i class="fa-solid fa-location-dot"></i> Our Outlets</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-phone"></i> Contact Desk</a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-dark);">
+      <a href="https://wa.me/919196562199" target="_blank" class="btn-sig-wa" style="width: 100%; padding: 12px; margin-bottom: 10px;">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+      <a href="tel:+919196562199" class="btn-sig-specs" style="width: 100%; padding: 12px;">
+        <i class="fa-solid fa-phone"></i> Call +91 91965 62199
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       FLOATING ACTION DOCK
+       ========================================================================== -->
+  <div class="floating-actions-dock">
+    <button class="floating-top-btn" id="btnScrollTop" title="Scroll to Top" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Master JavaScript Application Controller -->
+  <script src="app.js"></script>
+
+  <!-- Outlets Region Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.outlet-filter-btn');
+      const cards = document.querySelectorAll('.outlet-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const region = btn.getAttribute('data-region');
+          cards.forEach(card => {
+            if (region === 'all' || card.getAttribute('data-region') === region) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

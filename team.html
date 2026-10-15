@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siyad Sirajudeen — Chief Executive Officer | YOR Realty Kerala</title>
+  <meta name="description" content="Meet Siyad Sirajudeen, Founder & Chief Executive Officer of YOR Realty. 25 years of real estate experience, institutional title governance, and property advisory in Kerala." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c59b27'/><path d='M30 70 L50 25 L70 70 Z' fill='%23ffffff'/></svg>">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Fluid Effects -->
+  <canvas id="fluidCanvas" class="fluid-canvas"></canvas>
+  <div class="fluid-ambient-orb fluid-orb-1"></div>
+  <div class="fluid-ambient-orb fluid-orb-2"></div>
+  <div class="fluid-ambient-orb fluid-orb-3"></div>
+  <div class="liquid-cursor-glow" id="liquidCursorGlow"></div>
+
+  <!-- ==========================================================================
+       STICKY LUXURY NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-flex">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav">
+        <ul class="nav-menu-desktop">
+          <li class="nav-item"><a href="index.html" class="nav-link-item">Home</a></li>
+          
+          <li class="nav-item">
+            <a href="why-choose-us.html" class="nav-link-item active">
+              About <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#aboutSection" class="dropdown-link"><i class="fa-solid fa-building-columns"></i> Who We Are</a></li>
+              <li><a href="why-choose-us.html" class="dropdown-link"><i class="fa-solid fa-handshake-angle"></i> Why Choose YOR</a></li>
+              <li><a href="team.html" class="dropdown-link active"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+              <li><a href="index.html#statementBanner" class="dropdown-link"><i class="fa-solid fa-shield-halved"></i> 30-Yr Legal Scrutiny</a></li>
+              <li><a href="index.html#reviewsSection" class="dropdown-link"><i class="fa-solid fa-star"></i> Verified Testimonials</a></li>
+              <li><a href="index.html#partnersSection" class="dropdown-link"><i class="fa-solid fa-city"></i> Trusted Builders</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="properties.html" class="nav-link-item">
+              Properties <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="properties.html?filter=villas" class="dropdown-link"><i class="fa-solid fa-house"></i> Luxury Villas</a></li>
+              <li><a href="properties.html?filter=apartments" class="dropdown-link"><i class="fa-solid fa-building"></i> Modern Apartments</a></li>
+              <li><a href="properties.html?filter=plots" class="dropdown-link"><i class="fa-solid fa-layer-group"></i> Clear-Title Plots</a></li>
+              <li><a href="properties.html?filter=commercial" class="dropdown-link"><i class="fa-solid fa-store"></i> Commercial Yield</a></li>
+              <li><a href="properties.html?filter=luxury" class="dropdown-link"><i class="fa-solid fa-gem"></i> Waterfront Mansions</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#verticalsSection" class="nav-link-item">
+              Verticals <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="sales.html" class="dropdown-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+              <li><a href="rentals.html" class="dropdown-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+              <li><a href="investment.html" class="dropdown-link"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="index.html#valuationSection" class="nav-link-item">
+              Calculators <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#valuationSection" class="dropdown-link"><i class="fa-solid fa-calculator"></i> Home Loan EMI Calculator</a></li>
+              <li><a href="index.html#valuationSection" class="dropdown-link"><i class="fa-solid fa-compass-drafting"></i> Property Valuation Estimator</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a href="outlets.html" class="nav-link-item">Our Outlets</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Social, Phone Sub & Mobile Toggle -->
+      <div class="header-actions">
+        <div class="header-action-stack">
+          <div class="header-social">
+            <a href="https://wa.me/919196562199" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <a href="tel:+919196562199" class="header-phone-sub" title="Call YOR Realty Desk">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 91965 62199</span>
+          </a>
+        </div>
+
+        <!-- Mobile Drawer Toggle -->
+        <button class="btn-mobile-nav" id="btnMobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       PAGE HERO BANNER
+       ========================================================================== -->
+  <section class="properties-page-hero">
+    <div class="container">
+      <div class="properties-hero-content">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <span>/</span>
+          <a href="why-choose-us.html" style="color: inherit; text-decoration: none;">About</a>
+          <span>/</span>
+          <span style="color: var(--brand-gold);">Our Leadership</span>
+        </nav>
+        <span class="section-eyebrow"><i class="fa-solid fa-crown"></i> Executive Leadership · YOR Realty</span>
+        <h1 class="properties-page-headline">Meet Our <span>Chief Executive Officer</span></h1>
+        <p class="properties-page-lead">
+          25 years of authoritative real estate mastery, institutional title governance, and transformative property leadership across Kerala and global diaspora markets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CEO SPOTLIGHT SECTION (OUR TEAM: CEO ONLY)
+       ========================================================================== -->
+  <section class="section-padding">
+    <div class="container">
+
+      <div class="ceo-spotlight-card">
+
+        <!-- Left Column: CEO Portrait & Credentials -->
+        <div class="ceo-sidebar">
+          <div class="ceo-photo-container">
+            <div class="ceo-photo-glow"></div>
+            <div class="ceo-photo-frame">
+              <img src="ceo_siyad_sirajudeen.jpg" alt="Siyad Sirajudeen - CEO YOR Realty" onerror="this.onerror=null; this.src='https://media.licdn.com/dms/image/v2/D5603AQF2w1_Mh69ihA/profile-displayphoto-crop_800_800/B56Z_m2NQkJoAI-/0/1786284398316?e=1793836800&v=beta&t=bZ9QSUqVlyKaNMZP6-OXbb6tsJN_ZwSdaa32klBltmw';" />
+            </div>
+            <div class="ceo-verified-badge" title="Verified Chief Executive">
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+
+          <h2 class="ceo-name">Siyad Sirajudeen</h2>
+          <span class="ceo-title">Chief Executive Officer (CEO)</span>
+
+          <div class="ceo-experience-pill">
+            <i class="fa-solid fa-award"></i>
+            <span>25 Years Real Estate Experience</span>
+          </div>
+
+          <ul class="ceo-credentials-list">
+            <li>
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Pioneer of 30-Year Forensic Title Lineage Scrutiny</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-network-wired"></i>
+              <span>Architect of YOR's 6 Regional Outlets Network</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-chart-line"></i>
+              <span>25+ Years in High-Yield Commercial &amp; Residential Land</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <span>Trusted Custodian for NRI Clients Across 40+ Countries</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: CEO Leadership Address & Vision -->
+        <div class="ceo-content">
+          <div>
+            <span class="ceo-eyebrow"><i class="fa-solid fa-quote-left"></i> CEO's Leadership Message</span>
+            <h3 class="ceo-quote-title">
+              "Real estate in Kerala is not merely about land and concrete. It is about honoring a family's lifetime of hard work, generational pride, and absolute legal security."
+            </h3>
+
+            <div class="ceo-narrative">
+              <p>
+                Over the past <strong>25 years in Kerala's property domain</strong>, I have witnessed firsthand how families and expatriates navigate an industry all too often marred by fragmented brokers, speculative pricing, and devastating title disputes.
+              </p>
+              <p>
+                I established <strong>YOR Realty</strong> with an unwavering commitment: to institutionalize trust. Every property under our purview undergoes an uncompromising 30-year forensic legal scrutiny, Resurvey alignment, and strict K-RERA compliance before it reaches our buyers.
+              </p>
+              <p>
+                Today, backed by our <strong>6 regional outlets</strong> across Kerala (Kollam HQ, Kochi, Trivandrum, Kozhikode, Thrissur, Kottayam) and our modern digital ecosystem, we ensure every transaction is clear, fair, and backed by institutional certainty.
+              </p>
+            </div>
+
+            <!-- Key Metrics Bar -->
+            <div class="ceo-stats-grid">
+              <div class="ceo-stat-item">
+                <div class="ceo-stat-num">25<span>+</span></div>
+                <div class="ceo-stat-label">Years Experience</div>
+              </div>
+              <div class="ceo-stat-item">
+                <div class="ceo-stat-num">1,200<span>+</span></div>
+                <div class="ceo-stat-label">Clear Titles</div>
+              </div>
+              <div class="ceo-stat-item">
+                <div class="ceo-stat-num">6</div>
+                <div class="ceo-stat-label">Kerala Outlets</div>
+              </div>
+              <div class="ceo-stat-item">
+                <div class="ceo-stat-num">100<span>%</span></div>
+                <div class="ceo-stat-label">Title Scrutiny</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Actions & Official Sign-off -->
+          <div class="ceo-footer-actions">
+            <div class="ceo-sign-box">
+              <span class="ceo-signature-name">Siyad Sirajudeen</span>
+              <span class="ceo-signature-sub">Chief Executive Officer · YOR Realty &amp; Property Management</span>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <a href="https://wa.me/919196562199?text=Hello%20Siyad%20Sirajudeen,%20I%20would%20like%20to%20consult%20with%20you%20regarding%20property%20advisory" target="_blank" class="btn btn-outline btn-sm" style="border-color: #25d366; color: #25d366;">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp CEO Desk
+              </a>
+              <a href="contact.html" class="btn btn-primary btn-sm">
+                <span>Book Advisory Session</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Institutional Duty Charter & Advisory CTA -->
+      <div class="why-feature-banner">
+        <div class="why-feature-banner-left">
+          <div class="why-banner-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="why-banner-text">
+            <h4>Direct Leadership Fiduciary Commitment</h4>
+            <p>Every transaction overseen by CEO Siyad Sirajudeen is governed by a strict zero-litigation covenant, transparent registration-linked valuation, and dedicated lifetime asset care.</p>
+          </div>
+        </div>
+        <div class="why-banner-cta">
+          <a href="contact.html" class="btn btn-primary btn-sm">
+            <span>Schedule Private Consultation</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL LUXURY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo-wrap">
+            <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+          </a>
+          <p>
+            YOR Realty is Kerala's premier real estate institution. Delivering 100% legal title scrutiny, transparent asset brokerage, pre-approved bank loans, and dedicated NRI wealth custodianship across Kerala.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Property Categories</h4>
+          <ul class="footer-links">
+            <li><a href="properties.html?filter=villas">Luxury Villas</a></li>
+            <li><a href="properties.html?filter=apartments">Modern Apartments</a></li>
+            <li><a href="properties.html?filter=plots">Clear-Title Land Plots</a></li>
+            <li><a href="properties.html?filter=commercial">Commercial Assets</a></li>
+            <li><a href="properties.html?filter=luxury">Waterfront Mansions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Verticals</h4>
+          <ul class="footer-links">
+            <li><a href="sales.html">1. Property Sale &amp; Resale</a></li>
+            <li><a href="rentals.html">2. Property Rentals &amp; Leasing</a></li>
+            <li><a href="investment.html">3. Real Estate Investment</a></li>
+            <li><a href="outlets.html">Our Regional Outlets</a></li>
+            <li><a href="team.html">Our Core Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate Headquarters</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Cape House, Oyoor, Kollam District, Kerala — 691510</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:hello@yorrealty.com">hello@yorrealty.com</a>
+            </div>
+          </div>
+          <div class="footer-app-block">
+            <span class="footer-app-title">Download YOR App</span>
+            <div class="footer-app-buttons">
+              <a href="#" class="btn-footer-app" onclick="alert('YOR iOS App is coming soon.'); return false;">
+                <i class="fa-brands fa-apple"></i>
+                <span>iOS</span>
+              </a>
+              <a href="#" class="btn-footer-app" onclick="alert('YOR Android App is coming soon.'); return false;">
+                <i class="fa-brands fa-google-play"></i>
+                <span>Android</span>
+              </a>
+              <a href="properties.html" class="btn-footer-app">
+                <i class="fa-solid fa-globe"></i>
+                <span>Web App</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 YOR Realty &amp; Property Management. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-powered">Powered by <a href="#" target="_blank" rel="noopener noreferrer" class="powered-ainex">AINEX</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" style="height: 42px;" />
+      </a>
+      <button class="modal-close-btn" id="btnMobileNavClose" style="position: static;" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="index.html#aboutSection" class="mobile-nav-link"><i class="fa-solid fa-building-columns"></i> About YOR</a></li>
+      <li><a href="team.html" class="mobile-nav-link active"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+      <li><a href="properties.html" class="mobile-nav-link"><i class="fa-solid fa-gem"></i> Curated Properties</a></li>
+      <li><a href="sales.html" class="mobile-nav-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+      <li><a href="rentals.html" class="mobile-nav-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+      <li><a href="investment.html" class="mobile-nav-link"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+      <li><a href="index.html#valuationSection" class="mobile-nav-link"><i class="fa-solid fa-calculator"></i> Calculators</a></li>
+      <li><a href="outlets.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Our Outlets</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-phone"></i> Contact Desk</a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-dark);">
+      <a href="https://wa.me/919196562199" target="_blank" class="btn-sig-wa" style="width: 100%; padding: 12px; margin-bottom: 10px;">
+        <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+      <a href="tel:+919196562199" class="btn-sig-specs" style="width: 100%; padding: 12px;">
+        <i class="fa-solid fa-phone"></i> Call +91 91965 62199
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       FLOATING ACTION DOCK
+       ========================================================================== -->
+  <div class="floating-actions-dock">
+    <button class="floating-top-btn" id="btnScrollTop" title="Scroll to Top" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- Master JavaScript Application Controller -->
+  <script src="app.js"></script>
+</body>
+</html>

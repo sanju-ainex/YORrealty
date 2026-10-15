@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-IN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Investment Advisory & High-Yield Assets | YOR Realty Kerala</title>
+  <meta name="description" content="Kerala's premier institutional real estate investment vertical. Pre-leased commercial assets yielding 7-9%, strategic NH-66 corridor land banking, and managed agro-estates." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c59b27'/><path d='M30 70 L50 25 L70 70 Z' fill='%23ffffff'/></svg>">
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Pro CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Master Ultra-Luxury Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Fluid Effects -->
+  <canvas id="fluidCanvas" class="fluid-canvas"></canvas>
+  <div class="fluid-ambient-orb fluid-orb-1"></div>
+  <div class="fluid-ambient-orb fluid-orb-2"></div>
+  <div class="fluid-ambient-orb fluid-orb-3"></div>
+  <div class="liquid-cursor-glow" id="liquidCursorGlow"></div>
+
+
+
+  <!-- Sticky Luxury Navbar -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-flex">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+      </a>
+
+      <nav class="desktop-nav">
+        <ul class="nav-menu-desktop">
+          <li class="nav-item"><a href="index.html" class="nav-link-item">Home</a></li>
+          <li class="nav-item">
+            <a href="why-choose-us.html" class="nav-link-item">
+              About <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#aboutSection" class="dropdown-link"><i class="fa-solid fa-building-columns"></i> Who We Are</a></li>
+              <li><a href="why-choose-us.html" class="dropdown-link"><i class="fa-solid fa-handshake-angle"></i> Why Choose YOR</a></li>
+              <li><a href="team.html" class="dropdown-link"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+              <li><a href="index.html#statementBanner" class="dropdown-link"><i class="fa-solid fa-shield-halved"></i> 30-Yr Legal Scrutiny</a></li>
+              <li><a href="index.html#partnersSection" class="dropdown-link"><i class="fa-solid fa-city"></i> Trusted Builders</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="properties.html" class="nav-link-item">Properties</a></li>
+          <li class="nav-item">
+            <a href="index.html#verticalsSection" class="nav-link-item active">
+              Verticals <i class="fa-solid fa-angle-down"></i>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="sales.html" class="dropdown-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+              <li><a href="rentals.html" class="dropdown-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+              <li><a href="investment.html" class="dropdown-link active"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="index.html#valuationSection" class="nav-link-item">Calculators</a></li>
+          <li class="nav-item"><a href="outlets.html" class="nav-link-item">Our Outlets</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link-item">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-action-stack">
+          <div class="header-social">
+            <a href="https://wa.me/919196562199" target="_blank" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <a href="tel:+919196562199" class="header-phone-sub" title="Call YOR Realty Desk">
+            <i class="fa-solid fa-phone"></i>
+            <span>+91 91965 62199</span>
+          </a>
+        </div>
+        <button class="btn-mobile-nav" id="btnMobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="properties-page-hero">
+    <div class="container">
+      <div class="properties-hero-content">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+          <i class="fa-solid fa-chevron-right breadcrumb-separator"></i>
+          <a href="index.html#verticalsSection">Verticals</a>
+          <i class="fa-solid fa-chevron-right breadcrumb-separator"></i>
+          <span>Real Estate Investment</span>
+        </nav>
+
+        <div class="properties-hero-badge">
+          <i class="fa-solid fa-chart-line"></i> Core Institutional Vertical 03
+        </div>
+
+        <h1 class="properties-hero-headline">
+          High-Yield Kerala <span>Real Estate Investments</span>
+        </h1>
+
+        <p class="properties-hero-sub">
+          Engineered for sophisticated domestic and NRI investors seeking authentic wealth protection. From pre-leased commercial assets with predictable 7–9% rental yields to strategic NH-66 corridor land parcels with high capital appreciation.
+        </p>
+
+        <!-- Trust Metric Pills -->
+        <div class="properties-trust-pills">
+          <div class="trust-badge-pill">
+            <i class="fa-solid fa-coins"></i>
+            <span>7% – 9% Commercial Net Yield</span>
+          </div>
+          <div class="trust-badge-pill">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <span>NH-66 6-Lane Expansion Focus</span>
+          </div>
+          <div class="trust-badge-pill">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>30-Year Prior Title Guarantee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <section class="section-padding" style="background: #ffffff;">
+    <div class="container">
+      
+      <!-- Section Intro -->
+      <div class="section-head" style="text-align: center; margin-bottom: 30px;">
+        <span class="section-eyebrow"><i class="fa-solid fa-layer-group"></i> Strategic Asset Classes</span>
+        <h2 class="section-headline">Three Institutional <span>Investment Portfolios</span></h2>
+        <p class="section-lead" style="margin: 0 auto;">
+          Diversify your capital across verified, cashflow-generating, and growth-oriented Kerala property assets.
+        </p>
+      </div>
+
+      <!-- 3 Asset Class Cards -->
+      <div class="asset-class-grid">
+        
+        <!-- Class 01: Pre-Leased Commercial -->
+        <div class="asset-class-card">
+          <span class="asset-roi-badge"><i class="fa-solid fa-bolt"></i> 7.5% – 9.0% Net Annual Yield</span>
+          <div class="dual-card-header">
+            <div class="dual-card-icon">
+              <i class="fa-solid fa-store"></i>
+            </div>
+            <div>
+              <span class="dual-card-subtitle">Immediate Day-1 Cashflow</span>
+              <h3 class="dual-card-title">Pre-Leased Commercial</h3>
+            </div>
+          </div>
+          <p style="font-size: 0.90rem; color: var(--text-muted); line-height: 1.6;">
+            Acquire fully operational retail showrooms, banking branches, and healthcare diagnostic centres leased to reputed corporate tenants.
+          </p>
+          <ul class="dual-feature-list">
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Institutional Tenants:</strong> Nationalised banks, supermarket chains, and multinational diagnostic labs.</div>
+            </li>
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Long Lock-In Leases:</strong> 9 to 15-year registered leases with mandatory 15% rent escalation every 3 years.</div>
+            </li>
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Turnkey Rental Escrow:</strong> Monthly rent credited directly to your bank account with zero management hassle.</div>
+            </li>
+          </ul>
+          <a href="#investmentInquiryCard" class="btn-sig-specs" style="padding: 12px 20px; text-decoration: none; text-align: center; justify-content: center; margin-top: auto;">
+            <span>Inquire About Pre-Leased Deals</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Class 02: Strategic Land Banking -->
+        <div class="asset-class-card">
+          <span class="asset-roi-badge" style="background: rgba(197, 155, 39, 0.15); color: #8a6a16;"><i class="fa-solid fa-arrow-trend-up"></i> 18% – 25% CAGR Potential</span>
+          <div class="dual-card-header">
+            <div class="dual-card-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div>
+              <span class="dual-card-subtitle">Corridor Capital Growth</span>
+              <h3 class="dual-card-title">Strategic Land Banking</h3>
+            </div>
+          </div>
+          <p style="font-size: 0.90rem; color: var(--text-muted); line-height: 1.6;">
+            Handpicked clear-title land parcels positioned along major infrastructure catalyst corridors in Kollam, Trivandrum, and Kochi.
+          </p>
+          <ul class="dual-feature-list">
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>NH-66 6-Lane Expansion:</strong> Direct frontage plots along newly expanding bypasses with immense commercial re-zoning upside.</div>
+            </li>
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Vizhinjam Port Belts:</strong> Logistics and warehousing corridors primed for explosive industrial appreciation.</div>
+            </li>
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Litigation-Proof Titles:</strong> 30-year forensic title audits and physical boundary demarcation fencing included.</div>
+            </li>
+          </ul>
+          <a href="#investmentInquiryCard" class="btn-sig-specs" style="padding: 12px 20px; text-decoration: none; text-align: center; justify-content: center; margin-top: auto;">
+            <span>Explore Land Banking Portfolios</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Class 03: Managed Agro-Estates -->
+        <div class="asset-class-card">
+          <span class="asset-roi-badge" style="background: rgba(14, 165, 233, 0.12); color: #0284c7;"><i class="fa-solid fa-seedling"></i> Steady Agro Yield + Land Value</span>
+          <div class="dual-card-header">
+            <div class="dual-card-icon">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <div>
+              <span class="dual-card-subtitle">Green Wealth Custodianship</span>
+              <h3 class="dual-card-title">Managed Farmland</h3>
+            </div>
+          </div>
+          <p style="font-size: 0.90rem; color: var(--text-muted); line-height: 1.6;">
+            Highland rubber, cardamom, and spice plantations managed by agricultural professionals, offering tax-efficient yields and long-term security.
+          </p>
+          <ul class="dual-feature-list">
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Professional Farm Upkeep:</strong> Regular tapping, harvesting, fertilisation, and timber valuation supervision.</div>
+            </li>
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Tax-Free Agricultural Returns:</strong> Enjoy 100% tax-exempt farm income under Indian Income Tax Act regulations.</div>
+            </li>
+            <li>
+              <span class="feat-check"><i class="fa-solid fa-check"></i></span>
+              <div><strong>Eco-Tourism & Retreat Potential:</strong> Scenic highland vantage points ideal for premium luxury farm-stays.</div>
+            </li>
+          </ul>
+          <a href="#investmentInquiryCard" class="btn-sig-specs" style="padding: 12px 20px; text-decoration: none; text-align: center; justify-content: center; margin-top: auto;">
+            <span>View Managed Agro Estates</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- 4-Step Investment Governance Framework -->
+      <div style="margin-top: 60px; margin-bottom: 70px;">
+        <div class="section-head" style="text-align: center; margin-bottom: 30px;">
+          <span class="section-eyebrow"><i class="fa-solid fa-shield-check"></i> Institutional Due Diligence</span>
+          <h2 class="section-headline">The 4-Step Investment <span>Governance Framework</span></h2>
+          <p class="section-lead" style="margin: 0 auto;">
+            How YOR Realty mitigates risk and optimizes investment yield for domestic and international investors.
+          </p>
+        </div>
+
+        <div class="process-timeline-grid">
+          <div class="process-step-card">
+            <span class="process-step-num">01</span>
+            <h4 class="process-step-title">Micro-Market ROI Audit</h4>
+            <p class="process-step-desc">
+              Rigorous analysis of traffic flow, upcoming government infrastructure projects, sub-registrar transaction trends, and net rental yields.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="process-step-num">02</span>
+            <h4 class="process-step-title">Forensic Title Scrutiny</h4>
+            <p class="process-step-desc">
+              High Court legal advocates verify 30-year prior deeds, patta, survey boundary sketches, and obtain certified nil-encumbrance reports.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="process-step-num">03</span>
+            <h4 class="process-step-title">Acquisition & Lease Novation</h4>
+            <p class="process-step-desc">
+              Execution of clean conveyance deed, transfer of corporate tenant security deposits, and novation of rental lease contracts directly to you.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="process-step-num">04</span>
+            <h4 class="process-step-title">Active Custodianship & Exit</h4>
+            <p class="process-step-desc">
+              Ongoing rent collection, property tax compliance, quarterly inspection audits, and structured exit liquidation after your target holding period.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Private Investment Consultation Form Card -->
+      <div class="vertical-form-card" id="investmentInquiryCard">
+        <div style="max-width: 720px; margin: 0 auto; text-align: center; margin-bottom: 32px;">
+          <span class="section-eyebrow"><i class="fa-solid fa-chart-line"></i> Private Wealth Desk</span>
+          <h3 style="font-family: var(--font-heading); font-size: 1.85rem; font-weight: 800; color: var(--text-primary); margin-bottom: 8px;">
+            Request a Private Investment Consultation
+          </h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted);">
+            Speak confidentially with our Senior Real Estate Investment Advisory Desk regarding your capital allocation goals in Kerala.
+          </p>
+        </div>
+
+        <form id="investmentInquiryForm" onsubmit="event.preventDefault(); alert('Thank you! Your investment consultation request has been submitted. Our Senior Investment Director will contact you within 2 hours.'); this.reset();">
+          <div class="form-two-col">
+            <div class="finder-field">
+              <label for="invName">Investor Name *</label>
+              <input type="text" id="invName" placeholder="e.g. Dr. Thomas Mathew" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.9rem;" />
+            </div>
+
+            <div class="finder-field">
+              <label for="invPhone">Mobile / WhatsApp Number *</label>
+              <input type="tel" id="invPhone" placeholder="e.g. +971 50 1234567 / +91 98765 43210" required style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.9rem;" />
+            </div>
+          </div>
+
+          <div class="form-two-col">
+            <div class="finder-field">
+              <label for="invCapital">Target Capital Allocation</label>
+              <select id="invCapital" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.9rem; background: #ffffff;">
+                <option value="25to50">₹25 Lakhs — ₹50 Lakhs</option>
+                <option value="50to1cr">₹50 Lakhs — ₹1.0 Crore</option>
+                <option value="1crto3cr">₹1.0 Crore — ₹3.0 Crore</option>
+                <option value="3crto10cr">₹3.0 Crore — ₹10.0 Crore+</option>
+              </select>
+            </div>
+
+            <div class="finder-field">
+              <label for="invAssetClass">Preferred Asset Strategy</label>
+              <select id="invAssetClass" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.9rem; background: #ffffff;">
+                <option value="preleased">Pre-Leased Commercial (Immediate 7-9% Yield)</option>
+                <option value="landbanking">Strategic Land Banking (High Capital Appreciation)</option>
+                <option value="farmland">Managed Farmland / Agro-Estate</option>
+                <option value="diversified">Custom Diversified Portfolio</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-two-col">
+            <div class="finder-field">
+              <label for="invHorizon">Target Investment Horizon</label>
+              <select id="invHorizon" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.9rem; background: #ffffff;">
+                <option value="short">2 — 3 Years (Medium-Term Capital Appreciation)</option>
+                <option value="medium">3 — 5 Years (Optimal Compound Growth)</option>
+                <option value="long">5+ Years (Long-Term Wealth Preservation)</option>
+                <option value="perpetual">Long-Term Regular Monthly Cashflow</option>
+              </select>
+            </div>
+
+            <div class="finder-field">
+              <label for="invInvestorType">Investor Residency Status</label>
+              <select id="invInvestorType" style="width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 0.9rem; background: #ffffff;">
+                <option value="nri_gcc">NRI (GCC / Middle East)</option>
+                <option value="nri_west">NRI (USA / UK / Europe / Canada)</option>
+                <option value="domestic">Resident Indian (Kerala / Pan-India)</option>
+                <option value="corporate">Family Office / Corporate Entity</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 24px;">
+            <button type="submit" class="btn-sig-specs" style="padding: 16px 40px; font-size: 1rem; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
+              <span>Request Private Portfolio Consultation</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo-wrap">
+            <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" />
+          </a>
+          <p>
+            YOR Realty is Kerala's premier real estate institution. Delivering 100% legal title scrutiny, transparent asset brokerage, pre-approved bank loans, and dedicated NRI wealth custodianship across Kerala.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Property Categories</h4>
+          <ul class="footer-links">
+            <li><a href="properties.html?filter=villas">Luxury Villas</a></li>
+            <li><a href="properties.html?filter=apartments">Modern Apartments</a></li>
+            <li><a href="properties.html?filter=plots">Clear-Title Land Plots</a></li>
+            <li><a href="properties.html?filter=commercial">Commercial Assets</a></li>
+            <li><a href="properties.html?filter=luxury">Waterfront Mansions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Verticals</h4>
+          <ul class="footer-links">
+            <li><a href="sales.html">1. Property Sale & Resale</a></li>
+            <li><a href="rentals.html">2. Property Rentals & Leasing</a></li>
+            <li><a href="investment.html">3. Real Estate Investment</a></li>
+            <li><a href="properties.html">Curated Properties Directory</a></li>
+            <li><a href="index.html#valuationSection">Home Loan EMI Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Corporate Headquarters</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Cape House, Oyoor, Kollam District, Kerala — 691510</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919196562199">+91 91965 62199</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:hello@yorrealty.com">hello@yorrealty.com</a>
+            </div>
+          </div>
+          <div class="footer-app-block">
+            <span class="footer-app-title">Download YOR App</span>
+            <div class="footer-app-buttons">
+              <a href="#" class="btn-footer-app" onclick="alert('YOR iOS App is coming soon.'); return false;">
+                <i class="fa-brands fa-apple"></i>
+                <span>iOS</span>
+              </a>
+              <a href="#" class="btn-footer-app" onclick="alert('YOR Android App is coming soon.'); return false;">
+                <i class="fa-brands fa-google-play"></i>
+                <span>Android</span>
+              </a>
+              <a href="properties.html" class="btn-footer-app">
+                <i class="fa-solid fa-globe"></i>
+                <span>Web App</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 YOR Realty & Property Management. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span class="footer-powered">Powered by <a href="#" target="_blank" rel="noopener noreferrer" class="powered-ainex">AINEX</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="https://qtrackapp.in/yor/wp-content/uploads/2026/07/logo-removebg-preview-1.png" alt="YOR Realty Logo" style="height: 42px;" />
+      </a>
+      <button class="modal-close-btn" id="btnMobileNavClose" style="position: static;" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="team.html" class="mobile-nav-link"><i class="fa-solid fa-user-tie"></i> Our Core Team</a></li>
+      <li><a href="properties.html" class="mobile-nav-link"><i class="fa-solid fa-gem"></i> Curated Properties</a></li>
+      <li><a href="sales.html" class="mobile-nav-link"><i class="fa-solid fa-handshake"></i> 1. Property Sale</a></li>
+      <li><a href="rentals.html" class="mobile-nav-link"><i class="fa-solid fa-key"></i> 2. Property Rentals</a></li>
+      <li><a href="investment.html" class="mobile-nav-link active"><i class="fa-solid fa-chart-line"></i> 3. Real Estate Investment</a></li>
+      <li><a href="index.html#valuationSection" class="mobile-nav-link"><i class="fa-solid fa-calculator"></i> Calculators</a></li>
+      <li><a href="outlets.html" class="mobile-nav-link"><i class="fa-solid fa-location-dot"></i> Our Outlets</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-phone"></i> Contact Desk</a></li>
+    </ul>
+  </aside>
+
+  <!-- Floating Action Dock -->
+  <div class="floating-actions-dock">
+    <button class="floating-top-btn" id="btnScrollTop" title="Scroll to Top" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
